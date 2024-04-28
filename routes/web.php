@@ -304,7 +304,7 @@
  Route::get('/editArticlesHome/{id}','SurveyPlanController@editArticlesHome');
  Route::post('/updateArticalListData','SurveyPlanController@updateArticalListData');
  Route::get('/confirmJobPage','SurveyPlanController@confirmJobPage');
- Route::get('/getConsignmentData/{id}', "SurveyPlanController@getConsignmentData");
+ Route::get('/getConsignmentData', "SurveyPlanController@getConsignmentData");
  Route::get('/getConsignmentResult/{id}', "SurveyPlanController@getConsignmentResult");
  Route::get('/getCustomerData/{id}', "SurveyPlanController@getCustomerData");
  Route::get('/checkSurveyComplete/{id}', "SurveyPlanController@checkSurveyComplete");
@@ -329,7 +329,7 @@
  Route::post('/updatePackingList', "PackingController@updatePackingList");
  Route::get('packingDestroy/{id}','PackingController@packingDestroy');
  Route::get('packingListDetails/{id}','PackingController@packingListDetails');
- Route::get('checkPackingListData/{id}','PackingController@checkPackingListData');
+ Route::get('checkPackingListData','PackingController@checkPackingListData');
  Route::get('getIamgeData/{id}','PackingController@getIamgeData');
  Route::get('getPackingData/{id}','PackingController@getPackingData');
 
@@ -347,7 +347,7 @@
  Route::post('updateDelivery','DeliveryController@updateDelivery');
  Route::get('deliveryDestroy/{id}','DeliveryController@deliveryDestroy');
  Route::post('/sendPrintDelivaryForm','DeliveryController@sendPrintDelivaryForm');
- Route::get('getDeliveryData/{id}','DeliveryController@getDeliveryData');
+ Route::get('getDeliveryData','DeliveryController@getDeliveryData');
 
  Route::get('/trackingPage','TrackingController@trackingPage');
  Route::post('addTrackingData','TrackingController@addTrackingData');

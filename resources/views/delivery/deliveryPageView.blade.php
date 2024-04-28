@@ -265,12 +265,12 @@
 
             //get customer deatils of consignment no
             $('#consignment_no').keydown(function(e){
-                var base_url= basePath();
+                var base_url= "{{env('APP_URL')}}";
                 if(e.keyCode == 13) {
                     var cnno = $('#consignment_no').val();
                     if (cnno != "") {
                         $.ajax({
-                            url: base_url+'getDeliveryData/{id}',
+                            url: base_url+'getDeliveryData',
                             type: 'GET',
                             data: {
                                 cn_no: cnno

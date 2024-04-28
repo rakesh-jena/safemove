@@ -164,10 +164,11 @@
 
             //get customer deatils of consignment no
             $('#consignment_no').on('blur',function(){
+                var base_url= "{{env('APP_URL')}}";
                 var cnno= $('#consignment_no').val();
                 if(cnno !="") {
                     $.ajax({
-                        url: 'getConsignmentData/{id}',
+                        url: base_url+'getConsignmentData/{id}',
                         type: 'GET',
                         data: {
                             cn_no: cnno,
