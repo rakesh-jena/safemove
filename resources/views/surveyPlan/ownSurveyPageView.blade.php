@@ -1066,9 +1066,9 @@
             });
 
             //get customer deatils of consignment no
-            $('#consignment_no').change(function(e){
-                var base_url= basePath();
-                if(e.keyCode == 13) {
+            $('#consignment_no').on("keydown", function(e){
+                var base_url= "{{env('APP_URL')}}";
+                if(e.which == 13) {
                 var flag;
                 var cnno= $('#consignment_no').val();
                 if(cnno !="") {
